@@ -6,48 +6,58 @@
 }
 
 :root {
-    --cor1:#F2D680;
-    --cor2:#e2b47b;
-    --cor3:#BF7E45;
-    --cor4:#8C5332;
-    --cor5:#59332A;
+    --cor1: #EAD2AC;
+    --cor2: #eed0a0;
+    --cor3: lightblue;
+    --cor4: #2DC7FF;
+    --cor5: #00ABE7;
+    --cor6: #0081AF;
 }
 
 header {
-    background-image: linear-gradient(to bottom, var(--cor2), var(--cor3));
+    background-image: linear-gradient(to top, var(--cor3), var(--cor4));
     min-height: 150px;
-
 }
 
-header > h1 {
+header>h1 {
     color: white;
     text-align: center;
     font-size: 3em;
 }
 
-header > h2 {
-    color: white;
+
+h2 {
+    color: rgb(158, 156, 156);
     text-align: center;
 }
 
+a#pagina_atual {
+    text-decoration: underline;
+}
 nav#principal {
-    background-image: linear-gradient(to bottom, var(--cor3), var(--cor4));
+    background-color: var(--cor3);
 }
 
-nav > a{
+
+nav>a {
     text-decoration: none;
-    color: white;
+    font-weight: bold;
+    color: #004080;
     font-size: 1.2em;
     padding-right: 15px;
     padding-left: 10px;
-    margin: 0;
+    transition-duration: 0.2s;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
 }
 
+nav>a:hover {
+    background-color: var(--cor1);
+    transition: background-color 0.3s ease, color 0.3 ease;
+}
 
 body {
-    background-color: var(--cor1);
+    background-color: var(--cor2);
 }
-
 
 main {
     background-color: white;
@@ -58,15 +68,47 @@ main {
     border-radius: 5px;
 }
 
-article > h1 {
+article>h1 {
     text-align: center;
     font-size: 2em;
     margin: 0;
     padding-bottom: 10px;
 }
 
-article > h2 {
+article>h2 {
     text-align: center;
     font-size: 1.2em;
     margin: 0;
+}
+
+article > nav > a{
+    color: black;
+    text-align: center;
+    margin: 0;
+}
+
+nav#categorias {
+   padding: 15px;
+   
+}
+
+p.legenda_produto {
+    color:  rgb(159, 159, 159);
+    font-size: 1em;
+    padding-top: 10px;
+    
+}
+
+.produtos_container {
+    display: flex;               
+    gap: 40px;                   
+    justify-content: center;     
+}
+
+.produtos {
+    border: 1px solid #ccc;     
+    padding: 10px;
+    width: 200px;      
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;          
 }
