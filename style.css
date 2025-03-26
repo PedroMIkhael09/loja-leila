@@ -57,6 +57,7 @@ nav>a:hover {
 
 body {
     background-color: var(--cor2);
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 main {
