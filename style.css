@@ -1,4 +1,5 @@
 @charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400&family=Montserrat:wght@600&family=Lora:wght@400&family=Open+Sans:wght@400&display=swap');
 
 * {
     margin: 0;
@@ -6,12 +7,12 @@
 }
 
 :root {
-    --cor1: #EAD2AC;
-    --cor2: #eed0a0;
-    --cor3: lightblue;
-    --cor4: #2DC7FF;
-    --cor5: #00ABE7;
-    --cor6: #0081AF;
+    --cor1: #FFD700;
+    --cor2: #FFFFFF; 
+    --cor3: #EAD2AC; 
+    --cor4: #F8F8F8; 
+    --cor5: #C8C8C8; 
+    --cor6: #A67C00; 
 }
 
 header {
@@ -20,15 +21,30 @@ header {
 }
 
 header>h1 {
-    color: white;
+    color: var(--cor6);
     text-align: center;
     font-size: 3em;
+    padding-top: 20px;
+    font-weight: bold;
 }
 
+h1 {
+    font-family: 'Playfair Display', serif;
+    font-weight: bold;
+}
 
 h2 {
-    color: rgb(158, 156, 156);
+    color: var(--cor5);
     text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+}
+
+p {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
 }
 
 a#pagina_atual {
@@ -37,20 +53,20 @@ a#pagina_atual {
 
 a#saibamais {
     text-decoration: none;
-    color: black;
+    color: var(--cor6);
     font-weight: bold;
     font-size: 1.3em;
     text-align: center;
 }
-nav#principal {
-    background-color: var(--cor3);
-}
 
+nav#principal {
+    background-color: var(--cor4);
+}
 
 nav>a {
     text-decoration: none;
     font-weight: bold;
-    color: #004080;
+    color: var(--cor6);
     font-size: 1.2em;
     padding-right: 15px;
     padding-left: 10px;
@@ -59,8 +75,8 @@ nav>a {
 }
 
 nav>a:hover {
-    background-color: var(--cor1);
-    transition: background-color 0.3s ease, color 0.3 ease;
+    background-color: var(--cor3);
+    transition: 0.7s;
 }
 
 body {
@@ -69,7 +85,7 @@ body {
 }
 
 main {
-    background-color: white;
+    background-color: var(--cor2);
     min-width: 300px;
     max-width: 1000px;
     margin: auto;
@@ -90,58 +106,61 @@ article>h2 {
     margin: 0;
 }
 
-article > nav > a{
-    color: black;
+article > nav > a {
+    color: var(--cor6);
     text-align: center;
     margin: 0;
 }
 
+a#saibamais:hover {
+    background-color: var(--cor3);
+    transition: 0.7s;
+}
+
 nav#categorias {
-   padding: 15px;
-   
+    padding: 15px;
 }
 
 p.legenda_produto {
-    color:  rgb(159, 159, 159);
+    color: var(--cor5);
     font-size: 1em;
     padding-top: 10px;
-    
 }
 
 .produtos_container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);               
-    gap: 20px;                   
-    justify-content: center;     
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    justify-content: center;
 }
 
 .produtos {
-    border: 1px solid #ccc;     
+    border: 1px solid var(--cor5);
     padding: 10px;
-    width: 200px;      
+    width: 200px;
     box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;          
+    border-radius: 10px;
 }
 
 @media (max-width: 768px) {
     .produtos_container {
-       grid-template-columns: repeat(2, 1fr);               
+        grid-template-columns: repeat(2, 1fr);
     }
 
     .produtos img {
-        width: 100%;            
-        height: auto;           
-        max-width: 300px;        
+        width: 100%;
+        height: auto;
+        max-width: 300px;
     }
 
     .produtos {
-        width: 90%;              
-        max-width: 400px;       
+        width: 90%;
+        max-width: 400px;
     }
 }
 
 @media (max-width: 480px) {
     .produtos_container {
-        grid-template-columns: 1fr; 
+        grid-template-columns: 1fr;
     }
 }
