@@ -34,6 +34,14 @@ h2 {
 a#pagina_atual {
     text-decoration: underline;
 }
+
+a#saibamais {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-size: 1.3em;
+    text-align: center;
+}
 nav#principal {
     background-color: var(--cor3);
 }
@@ -101,8 +109,9 @@ p.legenda_produto {
 }
 
 .produtos_container {
-    display: flex;               
-    gap: 40px;                   
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);               
+    gap: 20px;                   
     justify-content: center;     
 }
 
@@ -116,9 +125,7 @@ p.legenda_produto {
 
 @media (max-width: 768px) {
     .produtos_container {
-        flex-direction: column;  
-        align-items: center;     
-        gap: 20px;               
+       grid-template-columns: repeat(2, 1fr);               
     }
 
     .produtos img {
@@ -130,5 +137,11 @@ p.legenda_produto {
     .produtos {
         width: 90%;              
         max-width: 400px;       
+    }
+}
+
+@media (max-width: 480px) {
+    .produtos_container {
+        grid-template-columns: 1fr; 
     }
 }
