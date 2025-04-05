@@ -60,7 +60,7 @@ a#saibamais {
 }
 
 nav#principal {
-    background-color: var(--cor4);
+    background-color: var(--cor2);
 }
 
 nav>a {
@@ -80,7 +80,7 @@ nav>a:hover {
 }
 
 body {
-    background-color: var(--cor2);
+    background-color: var(--cor4);
     font-family: Arial, Helvetica, sans-serif;
 }
 
